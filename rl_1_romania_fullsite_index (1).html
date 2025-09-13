@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RLG1 — Liga 1 România</title>
+  <style>
+    :root{--bg:#0b1220;--card:#0f1724;--muted:#9aa4b2;--accent:#ffcc00}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#071028 0%, #06121a 100%);color:#e6eef6;overflow-x:hidden}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:rgba(0,0,0,0.4);position:sticky;top:0;backdrop-filter:blur(8px);z-index:50}
+    .brand{display:flex;gap:12px;align-items:center;font-weight:800;font-size:20px;color:var(--accent)}
+    nav{display:flex;gap:12px}
+    nav button{background:none;border:none;color:var(--muted);font-size:15px;padding:8px 12px;border-radius:8px;cursor:pointer;transition:.3s}
+    nav button.active,nav button:hover{background:rgba(255,255,255,0.08);color:#fff}
+    section{display:none;min-height:100vh;padding:40px 20px;animation:.5s fade ease}
+    section.active{display:block}
+    @keyframes fade{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+    .card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 6px 18px rgba(2,6,23,0.6);margin-bottom:20px}
+    h2{margin-top:0;color:var(--accent)}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:10px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.08)}
+    th{color:var(--accent)}
+    .clubs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+    .club-card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.4)}
+    .club-name{font-size:18px;font-weight:700;margin-bottom:8px}
+    .contact{display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .btn{padding:10px 16px;border:none;border-radius:8px;background:var(--accent);color:#06121a;font-weight:700;cursor:pointer;text-decoration:none}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">RLG1</div>
+    <nav>
+      <button data-target="clasament" class="active">Clasament</button>
+      <button data-target="program">Program</button>
+      <button data-target="cluburi">Cluburi</button>
+      <button data-target="contact">Contact</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Clasament -->
+    <section id="clasament" class="active">
+      <h2>Clasament</h2>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>Echipă</th><th>J</th><th>V</th><th>E</th><th>Î</th><th>Puncte</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Rapid</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+            <tr><td>Craiova</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+            <tr><td>Dinamo</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+            <tr><td>FCSB</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+            <tr><td>UTA Arad</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Program -->
+    <section id="program">
+      <h2>Program meciuri</h2>
+      <div class="card">
+        <h3>Etapa 1</h3>
+        <p>Rapid vs FCSB</p>
+        <p>Dinamo vs Craiova</p>
+        <p>UTA stă</p>
+      </div>
+      <div class="card">
+        <h3>Etapa 2</h3>
+        <p>UTA vs Rapid</p>
+        <p>FCSB vs Dinamo</p>
+        <p>Craiova stă</p>
+      </div>
+      <div class="card">
+        <h3>Etapa 3</h3>
+        <p>Craiova vs UTA</p>
+        <p>Rapid vs Dinamo</p>
+        <p>FCSB stă</p>
+      </div>
+      <div class="card">
+        <h3>Etapa 4</h3>
+        <p>FCSB vs Craiova</p>
+        <p>UTA vs Dinamo</p>
+        <p>Rapid stă</p>
+      </div>
+      <div class="card">
+        <h3>Etapa 5</h3>
+        <p>Rapid vs Craiova</p>
+        <p>Dinamo vs UTA</p>
+        <p>FCSB stă</p>
+      </div>
+    </section>
+
+    <!-- Cluburi -->
+    <section id="cluburi">
+      <h2>Cluburi</h2>
+      <div class="clubs">
+        <div class="club-card">
+          <div class="club-name">Rapid București</div>
+          <p>Un club istoric din Capitală, cunoscut pentru atmosfera din Giulești și spiritul său combativ.</p>
+        </div>
+        <div class="club-card">
+          <div class="club-name">Universitatea Craiova</div>
+          <p>Simbol al Olteniei, Craiova are o tradiție puternică și suporteri pasionați.</p>
+        </div>
+        <div class="club-card">
+          <div class="club-name">Dinamo București</div>
+          <p>Unul dintre cele mai titrate cluburi românești, cu rivalități legendare și o istorie bogată.</p>
+        </div>
+        <div class="club-card">
+          <div class="club-name">FCSB</div>
+          <p>Fostă Steaua București, cea mai de succes echipă din România, câștigătoare de trofee interne și internaționale.</p>
+        </div>
+        <div class="club-card">
+          <div class="club-name">UTA Arad</div>
+          <p>Club legendar din vestul țării, fondat de baronul Neuman, cu un trecut glorios în fotbalul românesc.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card contact">
+        <p>Alătură-te comunității pe Discord:</p>
+        <a class="btn" href="https://discord.gg/ZqfkVjzD" target="_blank">Intră pe Discord</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('nav button');
+    const sections = document.querySelectorAll('main section');
+
+    buttons.forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        buttons.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const target = btn.dataset.target;
+        sections.forEach(s=>{
+          if(s.id===target){
+            s.classList.add('active');
+          }else{
+            s.classList.remove('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
